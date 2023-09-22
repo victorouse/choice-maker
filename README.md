@@ -6,6 +6,10 @@ I was trying to choose a domain name for my [website](https://victorouse.github.
 
 https://chat.openai.com/share/18e318c9-01bf-483c-b2ab-2a6813ce1417
 
+![make your choices](./choose.png)
+![results](./results.png)
+
+
 ## How to Use
 
 1. **Enter Choices:** Users can input their domain names or other choices in the provided textarea, one choice per line.
