@@ -86,6 +86,7 @@
     let choices = [];
     let sortedChoices = [];
     let currentIndex = 0;
+    let comparisonIndex = 0;
 
     function startSorting() {
       const textarea = document.getElementById('choices');
@@ -96,6 +97,7 @@
       }
       sortedChoices = [choices[0]];
       currentIndex = 1;
+      comparisonIndex = 0;
       showComparison();
     }
 
@@ -103,6 +105,7 @@
       choices = [];
       sortedChoices = [];
       currentIndex = 0;
+      comparisonIndex = 0;
       document.getElementById('sort-container').style.display = 'none';
       document.getElementById('result-container').style.display = 'none';
     }
@@ -114,23 +117,29 @@
       }
       const comparisonDiv = document.getElementById('comparison');
       comparisonDiv.innerHTML = `
-                <button onclick="selectChoice(1)" class="btn btn-info choice-button">
-                    <p>${sortedChoices[sortedChoices.length - 1]}</p>
-                </button>
-                <button onclick="selectChoice(2)" class="btn btn-info choice-button">
-                    <p>${choices[currentIndex]}</p>
-                </button>
-            `;
+            <button onclick="selectChoice(1)" class="btn btn-info choice-button">
+                <p>${sortedChoices[comparisonIndex]}</p>
+            </button>
+            <button onclick="selectChoice(2)" class="btn btn-info choice-button">
+                <p>${choices[currentIndex]}</p>
+            </button>
+        `;
       document.getElementById('sort-container').style.display = 'block';
     }
 
     function selectChoice(selectedIndex) {
       if (selectedIndex === 1) {
-        sortedChoices.push(choices[currentIndex]);
+        comparisonIndex++;
+        if (comparisonIndex >= sortedChoices.length) {
+          sortedChoices.push(choices[currentIndex]);
+          currentIndex++;
+          comparisonIndex = 0;
+        }
       } else {
-        sortedChoices.splice(sortedChoices.length - 1, 0, choices[currentIndex]);
+        sortedChoices.splice(comparisonIndex, 0, choices[currentIndex]);
+        currentIndex++;
+        comparisonIndex = 0;
       }
-      currentIndex++;
       showComparison();
     }
 
