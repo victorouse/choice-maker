@@ -8,7 +8,7 @@ A web-based tool to interactively sort and rank a list of domain names or any ot
 
 I was trying to choose a domain name for my [website](https://victorouse.github.io) and had this idea.
 
-https://chat.openai.com/share/18e318c9-01bf-483c-b2ab-2a6813ce1417
+https://chat.openai.com/share/2edfdbd6-4107-438b-b822-aa8601fb1511
 
 ![make your choices](./choose.png)
 ![results](./results.png)
