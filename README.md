@@ -1,6 +1,10 @@
 # Choice Maker
 
+***This is all ChatGPT generated*** 🤖
+
 A web-based tool to interactively sort and rank a list of domain names or any other choices based on user preference. The tool is mobile responsive and uses Bootstrap for styling. The user can input their choices, compare them interactively, and the tool will display the top 5 preferred choices at the end.
+
+---
 
 I was trying to choose a domain name for my [website](https://victorouse.github.io) and had this idea.
 
